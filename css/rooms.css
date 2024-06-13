@@ -1,0 +1,128 @@
+@font-face {
+    font-family: traffic;
+    src: url(/assets/fonts/Traffic.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'traffic';
+    font-weight: bold;
+    font-size: 6vw;
+}
+#room-sec {
+    padding: 60px 0;
+}
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    align-items: center;
+}
+.card-btn h6 {
+    font-size: 30px;
+    padding-left: 50px;
+}
+.card-btn sup {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+   .mb-3 {
+    max-width: 900px;
+}
+
+   @media screen and (max-width: 900px) {
+    .mb-3 {
+        max-width: 540px;
+    }
+    .card-btn h6 {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .card-btn sup {
+        font-size: 15px;
+    }
+    .card-title {
+        font-size: 21px;
+    }
+    .card-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    .card-body {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .mb-3 {
+        max-width: 300px;
+    }
+}
